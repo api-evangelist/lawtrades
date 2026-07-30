@@ -1,19 +1,52 @@
 aid: lawtrades
 name: LawTrades
-description: LawTrades is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  LawTrades is a legal talent marketplace, founded in 2016, that matches companies with vetted
+  independent attorneys, paralegals, and legal operations professionals on flexible, on-demand
+  terms rather than through traditional law firms or ALSPs. The platform covers eleven practice
+  areas — commercial contracts, corporate law, data privacy and cyber security, intellectual
+  property, labor and employment, legal operations, litigation, M&A, product counsel, real
+  estate, and regulatory compliance — and handles matching, work-log management, invoicing,
+  payments, and real-time spend analytics in-product. A human-in-the-loop AI layer drafts
+  documents and flags risk for lawyer review. LawTrades raised a $6M Series A backed by 500
+  Global, Draper Associates, Social Capital, and AngelList. As of this enrichment pass the
+  company publishes no public API, developer portal, SDKs, or machine-readable API description.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/631b8bcafde15c05a06e9106/636c1a2c1b886a4ca4f3f2c6_lawtrades_logo_with_type_black.svg
 url: https://raw.githubusercontent.com/api-evangelist/lawtrades/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: no-public-api
+x-tier-reason: >-
+  Enrichment probe 2026-07-19 found no public API surface: api./docs./developer./developers.
+  lawtrades.com are all NXDOMAIN, no /llms.txt, no .well-known documents, no OpenAPI, no SDKs
+  on npm or PyPI, and no developer links anywhere in the site navigation, footer, or sitemap.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Legal
+- Legal Services
+- Legal Operations
+- Marketplace
+- Talent Marketplace
+- Contracts
+- Compliance
+- Professional Services
+- Artificial Intelligence
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,4 +55,39 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://lawtrades.com
+  url: https://www.lawtrades.com/
+- type: Blog
+  url: https://www.lawtrades.com/blog
+- type: Support
+  url: https://www.lawtrades.com/contact-us
+- type: Login
+  url: https://app.lawtrades.com/login
+- type: TermsOfService
+  url: https://www.lawtrades.com/terms
+- type: PrivacyPolicy
+  url: https://www.lawtrades.com/disclaimers-privacy
+- type: About
+  url: https://www.lawtrades.com/about-us
+- type: Careers
+  url: https://www.lawtrades.com/careers
+- type: Newsletter
+  url: https://www.lawtrades.com/newsletter
+- type: Podcast
+  url: https://podcast.lawtrades.com/
+- type: Community
+  url: https://www.lawtrades.com/community
+- type: Events
+  url: https://www.lawtrades.com/events
+- type: LinkedIn
+  url: https://www.linkedin.com/company/lawtrades-com/
+- type: Twitter
+  url: https://twitter.com/lawtrades
+- type: DomainSecurity
+  url: security/lawtrades-domain-security.yml
+- type: LLMsTxt
+  url: llms/lawtrades-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
