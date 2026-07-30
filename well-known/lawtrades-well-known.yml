@@ -1,0 +1,64 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of https://lawtrades.com and https://app.lawtrades.com
+summary: >-
+  No .well-known discovery documents are published. The marketing site
+  (www.lawtrades.com, Webflow behind Cloudflare) returns 404 for every probed
+  path. The application host (app.lawtrades.com, Express on Heroku) returns
+  HTTP 200 with content-type text/html for EVERY path, including nonsense
+  paths — it is a single-page-app catch-all, not a real discovery surface.
+  The 200s below are therefore recorded as not-present; no raw files were saved
+  and no WellKnown/SecurityTxt pointer is wired.
+hosts:
+- host: https://lawtrades.com
+  catch_all: false
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    present: false
+  - path: /.well-known/openid-configuration
+    status: 404
+    present: false
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    present: false
+  - path: /.well-known/api-catalog
+    status: 404
+    present: false
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    present: false
+  - path: /llms.txt
+    status: 404
+    present: false
+- host: https://app.lawtrades.com
+  catch_all: true
+  catch_all_evidence: >-
+    https://app.lawtrades.com/zzz-nonexistent-path-test also returns HTTP 200
+    with the same text/html SPA shell (server: Heroku, x-powered-by: Express).
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/html
+    present: false
+    note: SPA shell, not an RFC 9116 document
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    present: false
+    note: SPA shell, not OIDC discovery JSON
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html
+    present: false
+    note: SPA shell, not RFC 8414 metadata
+  - path: /.well-known/api-catalog
+    status: 200
+    content_type: text/html
+    present: false
+    note: SPA shell, not RFC 9727 api-catalog
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    content_type: text/html
+    present: false
+    note: SPA shell, not an ai-plugin manifest
