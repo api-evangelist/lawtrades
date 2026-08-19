@@ -33,7 +33,7 @@ x-tier-reason: >-
   Enrichment probe 2026-07-19 found no public API surface: api./docs./developer./developers.
   lawtrades.com are all NXDOMAIN, no /llms.txt, no .well-known documents, no OpenAPI, no SDKs
   on npm or PyPI, and no developer links anywhere in the site navigation, footer, or sitemap.
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
 tags:
