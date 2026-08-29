@@ -35,6 +35,9 @@ accessModel:
   method: derived
 image: https://cdn.prod.website-files.com/631b8bcafde15c05a06e9106/636c1a2c1b886a4ca4f3f2c6_lawtrades_logo_with_type_black.svg
 url: https://raw.githubusercontent.com/api-evangelist/lawtrades/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Enrichment probe 2026-07-19 found no public API surface: api./docs./developer./developers. lawtrades.com are all NXDOMAIN, no /llms.txt, no .well-known documents, no OpenAPI, no SDKs on npm or PyPI, a"
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
