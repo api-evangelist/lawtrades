@@ -64,34 +64,91 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-LawTrades is a legal talent marketplace, founded in 2016, that matches companies with vetted
-independent attorneys, paralegals, and legal operations professionals on flexible, on-demand terms.
-The platform covers eleven practice areas and handles matching, work-log management, invoicing,
-payments, and real-time spend analytics, with a human-in-the-loop AI layer that drafts documents and
-flags risk for lawyer review.
+LawTrades is a legal talent marketplace, founded in 2016, that matches companies with vetted independent attorneys, paralegals, and legal operations professionals on flexible, on-demand terms rather than through traditional law firms or ALSPs. The platform covers eleven practice areas — commercial contracts, corporate law, data privacy and cyber security, intellectual property, labor and employment, legal operations, litigation, M&A, product counsel, real estate, and regulatory compliance — and handles matching, work-log management, invoicing, payments, and real-time spend analytics in-product. A human-in-the-loop AI layer drafts documents and flags risk for lawyer review. LawTrades raised a $6M Series A backed by 500 Global, Draper Associates, Social Capital, and AngelList. As of this enrichment pass the company publishes no public API, developer portal, SDKs, or machine-readable API description.
 
-- Website: https://www.lawtrades.com/
-- Application: https://app.lawtrades.com/login
-- Backed by: 500 Global, Draper Associates, Social Capital, AngelList ($6M Series A)
+**Areas:** Company · Legal · Legal Services · Legal Operations · Marketplace · Talent Marketplace · Contracts · Compliance · Professional Services · Artificial Intelligence
 
-## API surface
+## LawTrades on APIs.io
 
-**LawTrades publishes no public API.** An enrichment probe on 2026-07-19 found:
+Everything profiled for LawTrades is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lawtrades/](https://apis.io/providers/lawtrades/)** — or go straight to one of the APIs or properties below.
 
-- `api.lawtrades.com`, `docs.lawtrades.com`, `developer.lawtrades.com`, and
-  `developers.lawtrades.com` all NXDOMAIN
-- no OpenAPI, AsyncAPI, GraphQL, or Postman collection
-- no `/llms.txt` and no `/.well-known/` documents (the `app.` host returns HTTP 200 for every
-  path — an SPA catch-all, not a discovery surface)
-- no first-party SDKs on npm or PyPI; no company GitHub organization
-  (`github.com/lawtrades` is an individual employee account)
-- no status page, no published pricing page, and no published compliance program
-  (no SOC 2 / ISO 27001 / GDPR claims found)
+### Published properties
 
-## Artifacts
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| Artifact | File | Method |
-|---|---|---|
-| Domain security | `security/lawtrades-domain-security.yml` | probed |
-| Well-known (negative) | `well-known/lawtrades-well-known.yml` | searched |
-| llms.txt | `llms/lawtrades-llms.txt` | generated |
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [lawtrades](https://apis.io/servers/lawtrades/lawtrades/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Lawtrades Domain Security](https://apis.io/security/lawtrades/lawtrades-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.lawtrades.com/)
+- [Support](https://www.lawtrades.com/contact-us)
+- [Blog](https://www.lawtrades.com/blog)
+- [Terms of service](https://www.lawtrades.com/terms)
+- [Privacy policy](https://www.lawtrades.com/disclaimers-privacy)
+
+## API Evangelist rating
+
+**Kin Score 12.4** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 27.6 |
+
+**Agent readiness 12.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 12.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lawtrades/](https://apis.io/providers/lawtrades/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for LawTrades: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lawtrades/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
